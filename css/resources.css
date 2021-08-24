@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
 .title {
     color: green;
     text-transform: uppercase;
     text-align: center;
+    font-family: 'Rampart One', Helvetica;
 }
 
 body {
@@ -13,27 +16,36 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);   
 }
 
+.anti p{
+    font-family: 'Noto Sans JP', Helvetica;
+}
+
 
 .anti h2 {
     text-align: center;
+    font-family: 'Rampart One', Helvetica;
 }
 
 .hub{
     background-color: rgba(45, 45, 45, 0.1);
+    font-family: 'Noto Sans JP', Helvetica;
 }
 
 .hub h2 {
     text-align: center;
+    font-family: 'Rampart One', Helvetica;
 }
 
 .languages {
     background-color: rgba(45, 45, 45, 0.1);
+    font-family: 'Noto Sans JP', Helvetica;
 }
 
 .header_lan {
     text-align: center;
     font-size: 26px;
     font-weight: bold;
+    font-family: 'Rampart One', Helvetica;
 
 }
 

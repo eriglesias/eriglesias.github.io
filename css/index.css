@@ -145,11 +145,11 @@ header .navbar ul li a:hover{
 #menu{
     position: fixed;
     top: 2rem; right: 2rem;
-    background: oran;
+    background: #004B87;
     color: #fff;
     cursor: pointer;
     font-size: 2.5rem;
-    padding: 1rem 1.5rem;
+    padding:1rem 1.5rem;
     z-index: 1000;
     display: none;
 }
@@ -325,12 +325,27 @@ position: relative;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: 15px;
+    
 }
 
 .contact .row .content{
     flex:1 1 30rem;
     padding:4rem;
     padding-bottom: 0;
+    
+}
+.contact .title {
+    color: #DA291C;
+    font-family: 'Luckiest Guy',Helvetica;
+
+}
+.contact .info h3{
+    color: #DA291C;
+}
+
+.contact .info a{
+    color: #004B87;
 }
 
 
@@ -340,57 +355,70 @@ position: relative;
 
     html{
         font-size: 55%;
-        overflow-x: hidden;
     }
 
     .home{
-        padding: 1rem 4rem;
+        padding:1rem 4rem;
     }
 
-@media (max: width 991px){
+}
+
+@media (max-width:991px){
+
     header{
         left:-120%;
     }
-}
+ 
     #menu{
-    display: block;
+        display: block;
     }
-
+ 
     header.toggle{
-    left:0%;
+     left:0%;
     }
-
+ 
     body{
-        padding: 0;
+        padding:0;
     }
+ 
+ }
+ 
+ @media (max-width:768px){
 
-}
-@media (max: width 768px){
     html{
         font-size: 50%;
     }
-}
+ 
+ }
     
 
 
-@media (max: width 400px){
+ @media (max-width:400px){
+
     header{
         width: 100vw;
     }
+
     .heading{
-        margin: 0 3rem;
+        margin:0 3rem;
     }
+
     .about .row .counter .box{
         width: 100%;
     }
-
+ 
     .education .box-container .box{
-        width: 100%;
+        width:100%;
     }
 
     .resources .box-container .box{
         width:100%;
     }
-}
+
+    .contact .row form{
+        margin:3rem 0;
+    }
+
+ }
     
 
