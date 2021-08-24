@@ -10,7 +10,7 @@
     box-sizing: border-box;
     text-decoration: none;
     outline: none; border: none;
-    text-transform: capitalize;
+    /*text-transform: capitalize; */
     transition: all .2s linear;
 }
 
@@ -107,7 +107,7 @@ header .user img{
 header .user .name{
     font-size: 3.5rem;
     color:whitesmoke;
-    font-family: Helvetica;
+    font-family: 'Rampart One', Helvetica;
 }
 
 header .user .post {
@@ -123,6 +123,7 @@ header .navbar {
 header .navbar ul{
     list-style: none;
     padding: 1rem 3rem;
+    
 }
 
 header .navbar ul li a{
@@ -133,7 +134,8 @@ header .navbar ul li a{
     color: #fff;
     font-size: 2rem;
     border-radius: 5rem;
-    font-family: 'Noto Sans JP',Helvetica;
+    font-family: 'Luckiest Guy', cursive;
+    
 }
 
 header .navbar ul li a:hover{
@@ -165,7 +167,7 @@ header .navbar ul li a:hover{
 }
 
 .home h1{
-    font-size: 5rem;
+    font-size: 3rem;
     color: #004B87;
 }
 
@@ -177,7 +179,9 @@ header .navbar ul li a:hover{
     font-size: 2rem;
     color: black;
     padding: 1rem 0;
-    font-family: 'Noto Sans JP',Helvetica;
+    font-family: 'Noto Sans JP', Helvetica;
+    /*text-transform: lowercase;*/
+    text-align: justify;
 
 }
 
@@ -199,9 +203,10 @@ header .navbar ul li a:hover{
 
 .about .row .info h3{
     font-size: 2rem;
-    color: var(--yellow);
+    color: #004B87;
     padding: 1rem 0;
     font-weight: normal;
+    font-family: Helvetica;
 }
 
 .about .row .info h3 span{
@@ -313,6 +318,19 @@ position: relative;
 
 .resources .box-container .box:hover img{
     transform: scale(1.2);
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content{
+    flex:1 1 30rem;
+    padding:4rem;
+    padding-bottom: 0;
 }
 
 

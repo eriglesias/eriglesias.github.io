@@ -1,0 +1,104 @@
+.title {
+    color: green;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+body {
+    padding: 2em;
+}
+
+.anti{
+    background-color: rgba(45, 45, 45, 0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);   
+}
+
+
+.anti h2 {
+    text-align: center;
+}
+
+.hub{
+    background-color: rgba(45, 45, 45, 0.1);
+}
+
+.hub h2 {
+    text-align: center;
+}
+
+.languages {
+    background-color: rgba(45, 45, 45, 0.1);
+}
+
+.header_lan {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+
+}
+
+/* .languages {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    background-color: rgba(45, 45, 45, 0.1);
+} */
+    
+/*.languages  > * {
+    padding: 10px;
+    flex: 1 100%;
+} */
+
+/*.header_lan
+{  
+    text-align: center;
+    font-weight: bold;
+    font-size: 32 px;
+
+} */
+
+/*.main_lan {
+
+    text-align: left;
+    
+} */
+
+/* .languages p {
+   padding-left: 5px;
+   text-align: left;
+   width: 50%;
+   
+} */
+
+/* .languages img {
+    padding-left: 50%;
+    justify-self: auto;
+} */ 
+
+
+
+
+/* -------------------------------------------------------------------------------------------------*/
+/* Large */
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    /* This aligns items to the end line on main-axis */
+    justify-content: flex-end;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+    .navigation {
+        /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+    }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+    .navigation{
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
+}
