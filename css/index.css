@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap'); /* for navbar header name */
 
 :root{
     --yellow:#ffcd00;
 }
 
 *{
-    font-family: 'Rampart One', Helvetica;
+    font-family: 'Roboto', 'Rampart One', Helvetica;
     margin: 0; padding: 0;
     box-sizing: border-box;
     text-decoration: none;
@@ -105,9 +107,9 @@ header .user img{
 }
 
 header .user .name{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color:whitesmoke;
-    font-family: 'Rampart One', Helvetica;
+    font-family: 'Nerko One', Helvetica;
 }
 
 header .user .post {
@@ -134,7 +136,7 @@ header .navbar ul li a{
     color: #fff;
     font-size: 2rem;
     border-radius: 5rem;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Roboto', cursive;
     
 }
 
