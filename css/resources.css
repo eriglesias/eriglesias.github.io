@@ -1,53 +1,125 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 
-.title {
+#main_resources_header{
     color: green;
     text-transform: uppercase;
     text-align: center;
     font-family: 'Rampart One', Helvetica;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/*Header of the antilibrary section */
+#antilibrary_header{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Rampart One', Helvetica;
+    font-size: 25px;
+    font-weight: bold;
+}
+/*Header of the coding section */
+#coding_header{
+    color:  #003DA5;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Rampart One', Helvetica;
+    font-size: 25px;
+    font-weight: bold;
+}
+/*Header of the languages section */
+#languages_header {
+    color:  white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Rampart One', Helvetica;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/*Images of the page */
+img {
+    width: 25%;
+    height: auto;
 }
 
 body {
-    padding: 2em;
+    max-width: 1024px;
+    margin: 0 auto;
+    
+    
 }
 
-.anti{
-    background-color: rgba(45, 45, 45, 0.1);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);   
+/* Box of the Antilibrary section*/
+#antilibrary{
+    background-color: #C8102E;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); 
+    color: white;
 }
 
-.anti p{
+article p {
+    text-align: justify;
+    font-family: 'Noto Sans JP', Helvetica;
+    align-content: center;
+}
+
+/* image of the Antilibrary section */
+#reading_resources_image {
+    display: flex;
+    justify-content: center;
+}
+
+#coding {
+    background-color: white;
     font-family: 'Noto Sans JP', Helvetica;
 }
 
-
-.anti h2 {
-    text-align: center;
-    font-family: 'Rampart One', Helvetica;
-}
-
-.hub{
-    background-color: rgba(45, 45, 45, 0.1);
+#languages {
+    background-color: #003DA5;
+    /*background-color: rgba(45, 45, 45, 0.1);*/
     font-family: 'Noto Sans JP', Helvetica;
+    color: white;
+    
 }
 
-.hub h2 {
-    text-align: center;
-    font-family: 'Rampart One', Helvetica;
+/*will change the color of the visited and active hyperlinks to yellow for the antilibrary section */
+#antilibrary a:visited { 
+    color: #FECC02;
 }
 
-.languages {
-    background-color: rgba(45, 45, 45, 0.1);
+#antilibrary a:active { 
+    color: #FECC02;
+}
+
+/*will change the color of the visited and active hyperlinks to yellow for the languages section */
+
+ #languages a:visited { 
+    color: #FECC02;
+}
+
+#languages a:active { 
+    color: #FECC02;
+}
+
+/*will change the color of the visited and active hyperlinks to yellow for the coding section */
+
+#coding a:visited { 
+    color: #006AA7;
+}
+
+#coding a:active { 
+    color: #006AA7;
+}
+
+/* text of the Antilibrary section*/
+/*#antilibrary p{
     font-family: 'Noto Sans JP', Helvetica;
-}
-
-.header_lan {
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
-    font-family: 'Rampart One', Helvetica;
-
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} getting broken.... 
+*/
+/* Box of the Coding section  */
 
 /* .languages {
     display: flex;
@@ -97,6 +169,20 @@ body {
     flex-flow: row wrap;
     /* This aligns items to the end line on main-axis */
     justify-content: flex-end;
+}
+
+@media (max-width: 420px){
+    .wrap {
+        max-width: 320px;
+        display: block;
+    }
+
+    .wrap p {
+        margin-block-start: -3rem;
+        margin-inline-start: 1rem;
+        padding: 1rem;
+        position: relative;
+    }
 }
 
 /* Medium screens */

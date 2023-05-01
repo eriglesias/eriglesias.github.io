@@ -8,35 +8,53 @@
     <link rel="stylesheet" href="css/resources.css" >
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
 </head>
+<!-- Start of body-->
+<header id="main_resources_header"> Resources
+    <style>
+        /* will remove the underline of the links in the a tags and change the cursor to a pointer */
+        a:link{
+          text-decoration: none!important;
+          cursor: pointer;
+        }
+    </style>
+</header> 
 <body>
-    <div class="title">
-        <h1> Resources</h1>
-        <hr> 
-    </div>
-    
-    <div class="anti">        
-        <h2> Antilibrary</h2>
-        <p> Celebrating Tsundoku (積ん読) or at least a digital version of it I'm always looking for good readings, and stacking good books titles. You may find my own <a href="https://docs.google.com/spreadsheets/d/1gqnNogUq1Rc3c8Sb4jqj3pjIvkWyHWrvQ0q_MOCNEQ0/edit?usp=sharing" target= "_blank">Anti-library </a>here, also In this good  <a href="https://nesslabs.com/antilibrary">article </a> you may also  find reasons to build your antilibrary.
-         </p>
-         <img  src="web_images/tsundoku_3.png" width="300px" height="300px">
-    </div>
-
-    <div class="hub">
-        <h2> Coding </h2>
-        <p> Im currently interested in Data Science , Smart Contracts and Blockchain development , web development,  among others! To see more about it, and the code of 
-            some of the projects, please find them in my <a href="https://github.com/eriglesias"> Github </a>repository.  </p>
-            <img src="web_images/coding_2.png" width="300px" height="300px">      
-    </div>
-    <br>
-    <div class="languages">
-        <header class="header_lan"> Languages </header>
-        <article class="main_lan">
-        <p> Languages have attracted me and been part of my life for a long time. German has been the hard nut to crack, but I find them all fascinating. Too bad there is not enough time to learn them all. I also had the opportunity to teach my native language.
-             In this <a href="https://erkike.medium.com/">blog </a> 
-             I write some articles about some thoughts and experiences.
-        </p>
+    <main id="resources_page">
+        
+        <article class="main-section wrap" id="antilibrary">
+            <header id="antilibrary_header">Antilibrary</header>
+            <img  src="web_images/tsundoku_3.png" width="1024px" height="1024px" alt="image of a person reading representing tsundoku">
+            <p> Celebrating Tsundoku (積ん読), or at least a digital version of it I'm always looking for good readings, and stacking good books titles. 
+                You may find my own <a href="https://docs.google.com/spreadsheets/d/1gqnNogUq1Rc3c8Sb4jqj3pjIvkWyHWrvQ0q_MOCNEQ0/edit?usp=sharing" target= "_blank">Anti-library</a>
+                 here, also In this good <a href="https://nesslabs.com/antilibrary" target="_blank"> article </a> you may also find reasons to build your antilibrary.
+            </p>
+        </article> 
+        <article class="main-section wrap" id="coding">
+            <header id="coding_header">Coding</header>
+            <img src="web_images/coding_2.png" width="1024px" height="1024px" alt="image of a young guy coding on his room"> 
+            <p> Im currently interested in Data Science, Smart Contracts and Blockchain development, web development, among others! To see more about it, and the code of 
+                some of the projects, please find them in my <a href="https://github.com/eriglesias" target= "_blank"> Github </a>repository.  </p>  
+            <p> Also you can find me over the web in the following links:  </p> 
+             <ul> 
+                <li> <a href="https://www.codecademy.com/profiles/eriglesias">Codecademy</a> </li>
+                <li> <a href="https://www.freecodecamp.org/eriglesias">Freecodecamp</a></li>
+                <li> <a href="https://www.kaggle.com/erkike">Kaggle</a></li>
+            </ul>
         </article>
-        <img src="web_images/languages_website_1.png" width="300px" height="300px">
-    </div>
+        <article class="main-section wrap" id="languages">
+            <header id="languages_header"">Languages</header>
+            <img src="web_images/languages_website_1.png" width="1024px" height="1024px" alt="image of people laughing and speaking">
+            
+                <p> Languages have attracted me and been part of my life for a long time. German has been the hard nut to crack, but I find them all fascinating. Too bad there is not enough time to learn them all. I also had the opportunity to teach my native language.
+                     In this <a href="https://erkike.medium.com/" target= "_blank" >blog </a> 
+                     I write some articles about some thoughts and experiences.
+                </p>
+                <p>
+                    Please find some of the flashcards I use with Anki here: <a href="">Anki Cards</a>
+                </p>
+                <p> Also I have uploaded a web videos on <a href="https://www.youtube.com/channel/UCVzl59dfyUC3cOYlR544C9A" target= "_blank">Youtube</a> regarding this topic</p>
+                
+        </article>
+    </main>  
 </body>
 </html>
