@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 
+:root {
+    --dutch-red: rgb(174,28,40); 
+    --dutch-blue: #003DA5;
+}
+
+body {
+    max-width: 80%;
+    margin: 0 auto;  
+    
+}
+
 #main_resources_header{
     color: green;
     text-transform: uppercase;
@@ -7,7 +18,10 @@
     font-family: 'Rampart One', Helvetica;
     font-size: 25px;
     font-weight: bold;
+    padding-bottom: 2%;
 }
+
+/* Antilibrary Section */ 
 
 /*Header of the antilibrary section */
 #antilibrary_header{
@@ -18,6 +32,43 @@
     font-size: 25px;
     font-weight: bold;
 }
+
+.antilibrary {
+    display: flex;
+    background-color: var(--dutch-red);
+    padding-right: 20px;
+}
+
+
+.antilibrary .image-container{
+    justify-content: flex-start;
+}
+
+.antilibrary .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+
+.antilibrary .text-container {
+    flex-basis: 100%;
+    align-self: center;
+  }
+
+
+/* style for the article content */
+.antilibrary .text-container p {
+    text-align: justify;
+    font-family: 'Noto Sans JP', Helvetica;
+    margin-top: 20px;
+    padding: 5%;
+    color: white;
+    
+}
+
+/* Coding Section */ 
+
+
 /*Header of the coding section */
 #coding_header{
     color:  #003DA5;
@@ -26,7 +77,45 @@
     font-family: 'Rampart One', Helvetica;
     font-size: 25px;
     font-weight: bold;
+    
 }
+
+.coding {
+    display: flex;
+    background-color: white;
+    padding-right: 20px;
+}
+
+.coding .image-container{
+    justify-content: flex-start;
+}
+
+.coding .image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .coding .text-container {
+    flex-basis: 100%;
+    align-self: center;
+  }
+
+  .coding .text-container p {
+    text-align: justify;
+    font-family: 'Noto Sans JP', Helvetica;
+    margin-top: 20px;
+    padding: 5%;
+    color: black;
+    
+}
+
+.coding .text-container ul {
+    font-family: 'Noto Sans JP', Helvetica;
+}
+
+/* Languages Section */ 
+
+
 /*Header of the languages section */
 #languages_header {
     color:  white;
@@ -37,129 +126,69 @@
     font-weight: bold;
 }
 
-/*Images of the page */
-img {
-    width: 25%;
-    height: auto;
-}
 
-body {
-    max-width: 1024px;
-    margin: 0 auto;
-    
-    
-}
 
-/* Box of the Antilibrary section*/
-#antilibrary{
-    background-color: #C8102E;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); 
+.languages {
+    background-color: var(--dutch-blue);
+    font-family: 'Noto Sans JP', Helvetica;
     color: white;
+    display: flex;
+    padding-right: 20px;
+    
 }
 
-article p {
+.languages .image-container{
+    justify-content: flex-start;
+}
+
+.languages .image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .languages .text-container {
+    flex-basis: 100%;
+    align-self: center;
+  }
+
+  .languages .text-container p {
     text-align: justify;
     font-family: 'Noto Sans JP', Helvetica;
-    align-content: center;
-}
-
-/* image of the Antilibrary section */
-#reading_resources_image {
-    display: flex;
-    justify-content: center;
-}
-
-#coding {
-    background-color: white;
-    font-family: 'Noto Sans JP', Helvetica;
-}
-
-#languages {
-    background-color: #003DA5;
-    /*background-color: rgba(45, 45, 45, 0.1);*/
-    font-family: 'Noto Sans JP', Helvetica;
+    margin-top: 20px;
+    padding: 5%;
     color: white;
     
 }
 
+
 /*will change the color of the visited and active hyperlinks to yellow for the antilibrary section */
-#antilibrary a:visited { 
+.antilibrary a:visited { 
     color: #FECC02;
 }
 
-#antilibrary a:active { 
+.antilibrary a:active { 
     color: #FECC02;
 }
 
 /*will change the color of the visited and active hyperlinks to yellow for the languages section */
 
- #languages a:visited { 
+ .languages a:visited { 
     color: #FECC02;
 }
 
-#languages a:active { 
+.languages a:active { 
     color: #FECC02;
 }
 
 /*will change the color of the visited and active hyperlinks to yellow for the coding section */
 
-#coding a:visited { 
+.coding a:visited { 
     color: #006AA7;
 }
 
-#coding a:active { 
+.coding a:active { 
     color: #006AA7;
 }
-
-/* text of the Antilibrary section*/
-/*#antilibrary p{
-    font-family: 'Noto Sans JP', Helvetica;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} getting broken.... 
-*/
-/* Box of the Coding section  */
-
-/* .languages {
-    display: flex;
-    flex-flow: row wrap;
-    text-align: center;
-    background-color: rgba(45, 45, 45, 0.1);
-} */
-    
-/*.languages  > * {
-    padding: 10px;
-    flex: 1 100%;
-} */
-
-/*.header_lan
-{  
-    text-align: center;
-    font-weight: bold;
-    font-size: 32 px;
-
-} */
-
-/*.main_lan {
-
-    text-align: left;
-    
-} */
-
-/* .languages p {
-   padding-left: 5px;
-   text-align: left;
-   width: 50%;
-   
-} */
-
-/* .languages img {
-    padding-left: 50%;
-    justify-self: auto;
-} */ 
-
-
 
 
 /* -------------------------------------------------------------------------------------------------*/
