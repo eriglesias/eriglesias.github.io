@@ -6,7 +6,7 @@
 }
 
 body {
-    max-width: 80%;
+    max-width: 85%;
     margin: 0 auto;  
     
 }
@@ -33,6 +33,15 @@ body {
     font-weight: bold;
 }
 
+.first {
+    background-color: var(--dutch-red);
+}
+
+#antilibrary_header{
+    text-align: center;
+    color: white;
+}
+
 .antilibrary {
     display: flex;
     background-color: var(--dutch-red);
@@ -53,6 +62,7 @@ body {
 .antilibrary .text-container {
     flex-basis: 100%;
     align-self: center;
+  
   }
 
 
@@ -160,6 +170,10 @@ body {
     
 }
 
+.languages .text-container a {
+    color: #FECC02 ;
+}
+
 
 /*will change the color of the visited and active hyperlinks to yellow for the antilibrary section */
 .antilibrary a:visited { 
@@ -173,11 +187,11 @@ body {
 /*will change the color of the visited and active hyperlinks to yellow for the languages section */
 
  .languages a:visited { 
-    color: #FECC02;
+    color: #FFCD00;
 }
 
 .languages a:active { 
-    color: #FECC02;
+    color: #FFCD00;
 }
 
 /*will change the color of the visited and active hyperlinks to yellow for the coding section */
@@ -200,7 +214,7 @@ body {
     justify-content: flex-end;
 }
 
-@media (max-width: 420px){
+/* @media (max-width: 420px){
     .wrap {
         max-width: 320px;
         display: block;
@@ -212,7 +226,7 @@ body {
         padding: 1rem;
         position: relative;
     }
-}
+} */ 
 
 /* Medium screens */
 @media all and (max-width: 800px) {
@@ -224,8 +238,37 @@ body {
 
 /* Small screens */
 @media all and (max-width: 500px) {
+  
+    .antilibrary {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--dutch-red);
+        flex-wrap: wrap;
+        padding-right: 5px;
+        padding-left: 5px;
+    } 
+
+    .coding {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: white;
+        padding-right: 0.5px;
+        padding-left: 0.5px;
+    }
+
+    .languages {
+        background-color: var(--dutch-blue);
+        display: flex;
+        flex-direction: row;
+        padding-right: 5px;
+        padding-left: 5px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
     .navigation{
         /* On small screens, we are no longer using row direction but column */
-        flex-direction: column;
+        flex-direction:row;
     }
 }
