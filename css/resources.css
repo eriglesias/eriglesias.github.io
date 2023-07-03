@@ -6,7 +6,7 @@
 }
 
 body {
-    max-width: 85%;
+    max-width: 72%;
     margin: 0 auto;  
     
 }
@@ -265,6 +265,12 @@ body {
         padding-left: 5px;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    body {
+        max-width: 100%;
+        margin: 0 auto;  
+        
     }
 
     .navigation{
