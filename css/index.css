@@ -187,6 +187,14 @@ header .navbar ul li a:hover{
 
 }
 
+.about h2 {
+    font-size: 30px;
+    background: linear-gradient(45deg, #21468B 0%, #21468B 33%, rgba(126, 118, 118, 0.5) 33%, rgba(122, 118, 118, 0.5) 66%, #AE1C28 66%, #AE1C28 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
 .about .row {
     display: flex;
     align-items: center;
@@ -201,6 +209,19 @@ header .navbar ul li a:hover{
     flex: 1 1 48rem;
     padding: 2rem 1rem;
     padding-left: 6rem;
+}
+
+.about .row .info a {
+    font-style: italic;
+    text-decoration: none;
+    color: #21468B;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.about .row .info a:hover {
+    color: #AE1C28;
+    border-bottom: 1px solid #AE1C28;
+  
 }
 
 .about .row .info h3{
@@ -286,8 +307,6 @@ padding: 0 .5rem;
 
 }
 
-
-
 /* media queries */
 
 @media (max-width:1200px){
@@ -330,7 +349,6 @@ padding: 0 .5rem;
  
  }
     
-
 
  @media (max-width:400px){
 
