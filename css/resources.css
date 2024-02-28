@@ -11,17 +11,22 @@ body {
     
 }
 
+
+
 #main_resources_header{
     color: green;
     text-transform: uppercase;
     text-align: center;
     font-family: 'Rampart One', Helvetica;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: bold;
     padding-bottom: 2%;
 }
 
 /* Antilibrary Section */ 
+.first {
+    background-color: var(--dutch-red);
+}
 
 /*Header of the antilibrary section */
 #antilibrary_header{
@@ -31,16 +36,10 @@ body {
     font-family: 'Rampart One', Helvetica;
     font-size: 25px;
     font-weight: bold;
+    
+    
 }
 
-.first {
-    background-color: var(--dutch-red);
-}
-
-#antilibrary_header{
-    text-align: center;
-    color: white;
-}
 
 .antilibrary {
     display: flex;
@@ -159,15 +158,33 @@ body {
   .languages .text-container {
     flex-basis: 100%;
     align-self: center;
+    padding-left: 2%;
   }
+
 
   .languages .text-container p {
     text-align: justify;
     font-family: 'Noto Sans JP', Helvetica;
     margin-top: 20px;
-    padding: 5%;
+    padding: 2%;
     color: white;
-    
+    margin-bottom: 0;
+
+}
+    /* justify single lines from languages box */
+.languages .text-container p:not(:last-child)::after {
+    content : "";
+    display: inline-block;
+    width: 100%;
+    padding-left: 2%;
+}
+
+#second_p_languages{
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1%;
+    margin: 0;
 }
 
 .languages .text-container a {
