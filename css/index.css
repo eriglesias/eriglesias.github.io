@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap'); /* for navbar header name */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap');
+
 
 :root{
     --yellow:#ffcd00;
@@ -14,6 +16,17 @@
     outline: none; border: none;
     /*text-transform: capitalize; */
     transition: all .2s linear;
+}
+
+h1, h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 200;
+    letter-spacing: 0.05em;
+}
+
+.navbar {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 300;
 }
 
 *::selection{

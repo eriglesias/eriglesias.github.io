@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .language-card {
+      background: white;
+      padding: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .language-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .language-card h2 {
+      color: #005AA9;
+      font-size: 1.5rem;
+      margin: 0 0 1.5rem 0;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .language-card h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 2rem;
+      height: 3px;
+      background-color: #E4232E;
+    }
+
+    .resource-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .resource-item {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-left: 3px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .resource-item:hover {
+      border-left-color: #005AA9;
+      background-color: #f8f8f8;
+    }
+
+    .view-all {
+      display: inline-block;
+      background: #005AA9;
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .view-all:hover {
+      background: #E4232E;
+    }
+
+    /* De Stijl Inspired Layout */
+    .expanded-view-destijl {
+      position: fixed;
+      inset: 0;
+      background: white;
+      padding: 2rem;
+      overflow-y: auto;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .expanded-view-destijl.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .destijl-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .destijl-item {
+      background: white;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .destijl-item:nth-child(3n+1) {
+      grid-column: span 8;
+      border-left: 4px solid #E4232E;
+    }
+
+    .destijl-item:nth-child(3n+2) {
+      grid-column: span 4;
+      border-left: 4px solid #005AA9;
+    }
+
+    .destijl-item:nth-child(3n) {
+      grid-column: span 6;
+      border-left: 4px solid #FFC72C;
+    }
+
+    /* Modern Layout */
+    .expanded-view-modern {
+      position: fixed;
+      inset: 0;
+      background: #f5f5f5;
+      padding: 2rem;
+      overflow-y: auto;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .expanded-view-modern.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modern-layout {
+      display: flex;
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .modern-sidebar {
+      width: 250px;
+      background: white;
+      padding: 1.5rem;
+      height: fit-content;
+    }
+
+    .modern-content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .modern-item {
+      background: white;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .modern-item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Shared Elements */
+    .close-button {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      background: #E4232E;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      z-index: 1001;
+      transition: background 0.3s ease;
+    }
+
+    .close-button:hover {
+      background: #005AA9;
+    }
+
+    .expanded-header {
+      margin-bottom: 2rem;
+    }
+
+    .expanded-header h2 {
+      color: #005AA9;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Grid -->
+  <div class="grid">
+    <div class="language-card">
+      <h2>Dutch</h2>
+      <ul class="resource-list">
+        <li class="resource-item">
+          <h3>Woordenlijst</h3>
+          <p>Look for proper spelling and forms</p>
+        </li>
+        <li class="resource-item">
+          <h3>NPO Radio 1</h3>
+          <p>Listen to radio in Dutch</p>
+        </li>
+      </ul>
+      <button class="view-all" data-language="dutch">View All Resources</button>
+    </div>
+
+    <div class="language-card">
+      <h2>German</h2>
+      <ul class="resource-list">
+        <li class="resource-item">
+          <h3>Deutsche Welle</h3>
+          <p>News and learning resources</p>
+        </li>
+        <li class="resource-item">
+          <h3>ZDF</h3>
+          <p>German television content</p>
+        </li>
+      </ul>
+      <button class="view-all" data-language="german">View All Resources</button>
+    </div>
+  </div>
+
+  <!-- De Stijl Expanded View -->
+  <div class="expanded-view-destijl">
+    <button class="close-button">Close</button>
+    <div class="expanded-header">
+      <h2>Language Resources</h2>
+    </div>
+    <div class="destijl-grid">
+      <div class="destijl-item">
+        <h3>Woordenlijst</h3>
+        <p>Complete Dutch dictionary and language reference</p>
+      </div>
+      <div class="destijl-item">
+        <h3>NPO Radio 1</h3>
+        <p>24/7 Dutch radio programming</p>
+      </div>
+      <div class="destijl-item">
+        <h3>Schooltv</h3>
+        <p>Educational videos with subtitles</p>
+      </div>
+      <div class="destijl-item">
+        <h3>Taaladvies</h3>
+        <p>Language learning tips and advice</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modern Expanded View -->
+  <div class="expanded-view-modern">
+    <button class="close-button">Close</button>
+    <div class="modern-layout">
+      <div class="modern-sidebar">
+        <h3>Categories</h3>
+        <ul class="resource-list">
+          <li class="resource-item">Audio</li>
+          <li class="resource-item">Video</li>
+          <li class="resource-item">Reading</li>
+          <li class="resource-item">Practice</li>
+        </ul>
+      </div>
+      <div class="modern-content">
+        <div class="modern-item">
+          <h3>Woordenlijst</h3>
+          <p>Complete Dutch dictionary and language reference</p>
+        </div>
+        <div class="modern-item">
+          <h3>NPO Radio 1</h3>
+          <p>24/7 Dutch radio programming</p>
+        </div>
+        <div class="modern-item">
+          <h3>Schooltv</h3>
+          <p>Educational videos with subtitles</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const viewAllButtons = document.querySelectorAll('.view-all');
+      const closeButtons = document.querySelectorAll('.close-button');
+      const expandedViews = {
+        destijl: document.querySelector('.expanded-view-destijl'),
+        modern: document.querySelector('.expanded-view-modern')
+      };
+      
+      let currentLayout = 'destijl';
+
+      function toggleExpandedView(language, show = true) {
+        const view = expandedViews[currentLayout];
+        
+        if (show) {
+          view.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          
+          // Update header with language
+          view.querySelector('.expanded-header h2').textContent = 
+            `${language} Resources`;
+          
+          // Add animation to items
+          const items = view.querySelectorAll('.destijl-item, .modern-item');
+          items.forEach((item, index) => {
+            item.style.opacity = 0;
+            item.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+              item.style.transition = 'all 0.3s ease';
+              item.style.opacity = 1;
+              item.style.transform = 'translateY(0)';
+            }, index * 100);
+          });
+        } else {
+          view.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+
+      viewAllButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const language = this.dataset.language;
+          toggleExpandedView(language);
+        });
+      });
+
+      closeButtons.forEach(button => {
+        button.addEventListener('click', () => toggleExpandedView(null, false));
+      });
+
+      // Close on escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          toggleExpandedView(null, false);
+        }
+      });
+
+      // Layout switcher (if needed)
+      window.switchLayout = function(newLayout) {
+        if (expandedViews[newLayout]) {
+          currentLayout = newLayout;
+        }
+      };
+    });
+  </script>
+</body>
+</html>

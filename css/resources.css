@@ -1,297 +1,276 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+
 
 :root {
-    --dutch-red: rgb(174,28,40); 
-    --dutch-blue: #003DA5;
+    --burgundy: #8B1E2E;
+    --indigo: #1B3B6F;
+    --sand: #F5F2EB;
+    --ink: #2C2C2C;
+    --light: #F5F2EB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    max-width: 72%;
-    margin: 0 auto;  
-    
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--sand);
+    color: var(--ink);
+    line-height: 1.6;
 }
 
+#resources_page {
+    width: 100%;
+}
 
+/* Page Header -- 'Inkhub' */
 
-#main_resources_header{
-    color: green;
-    text-transform: uppercase;
+#main_resources_header {
+    position: relative;
     text-align: center;
-    font-family: 'Rampart One', Helvetica;
-    font-size: 35px;
-    font-weight: bold;
-    padding-bottom: 2%;
-}
-
-/* Antilibrary Section */ 
-.first {
-    background-color: var(--dutch-red);
-}
-
-/*Header of the antilibrary section */
-#antilibrary_header{
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Rampart One', Helvetica;
-    font-size: 25px;
-    font-weight: bold;
-    
-    
+    padding: 8rem 0;
+    margin: 3rem auto;
+    width: 100%;
 }
 
 
-.antilibrary {
+.title-group {
     display: flex;
-    background-color: var(--dutch-red);
-    padding-right: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.title-group:hover {
+    transform: translateY(-5px);
+}
+
+.latin-title {
+    font-family: 'Rampart One', cursive;
+    font-size: 3.5rem;
+    color: #567C4C;
+    letter-spacing: 0.15em;
+    text-shadow: 
+        2px 2px 0 rgba(86, 124, 76, 0.1),
+        -2px -2px 0 rgba(86, 124, 76, 0.1);
+    transition: text-shadow 0.3s ease;
+}
+
+.title-group:hover .latin-title {
+    text-shadow: 
+        3px 3px 0 rgba(86, 124, 76, 0.15),
+        -3px -3px 0 rgba(86, 124, 76, 0.15);
+}
+
+.japanese-title {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 2rem;
+    color: #688F5E;
+    letter-spacing: 0.2em;
+    transform: translateY(-0.5rem);
+    transition: opacity 0.3s ease;
+}
+
+/* Decorative elements */
+.zen-circle {
+    position: absolute;
+    right: calc(50% - 160px);
+    top: 2rem;
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid #567C4C;
+    border-radius: 50%;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+.zen-line {
+    position: absolute;
+    bottom: 3rem;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 1.5px;
+    background: #567C4C;
+    opacity: 0.4;
+    transform: rotate(-35deg);
+    transition: all 0.3s ease;
+}
+
+.title-group:hover ~ .zen-circle {
+    transform: scale(1.1);
+    opacity: 0.6;
+}
+
+.title-group:hover ~ .zen-line {
+    width: 50px;
+    opacity: 0.6;
 }
 
 
-.antilibrary .image-container{
-    justify-content: flex-start;
+/* Rest of the Page */
+
+.antilibrary, .coding, .languages {
+    display: flex;
+    width: 100%;
+    padding: 4rem 15%;
+    gap: 4rem;
+    min-height: 80vh;
+    position: relative;
 }
 
-.antilibrary .image-container img {
+.image-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    max-width: 50%;
+}
+
+.image-container img {
     width: 100%;
     height: auto;
-  }
-  
-
-.antilibrary .text-container {
-    flex-basis: 100%;
-    align-self: center;
-  
-  }
-
-
-/* style for the article content */
-.antilibrary .text-container p {
-    text-align: justify;
-    font-family: 'Noto Sans JP', Helvetica;
-    margin-top: 20px;
-    padding: 5%;
-    color: white;
-    
+    transition: transform 0.5s ease;
+    display: block;
 }
 
-/* Coding Section */ 
+.image-container:hover img {
+    transform: scale(1.05);
+}
 
+.text-container {
+    flex: 1;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 2px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    align-self: center;
+    max-width: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-/*Header of the coding section */
-#coding_header{
-    color:  #003DA5;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Rampart One', Helvetica;
-    font-size: 25px;
-    font-weight: bold;
-    
+.text-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Section specific styles */
+.antilibrary {
+    background: var(--burgundy);
 }
 
 .coding {
-    display: flex;
-    background-color: white;
-    padding-right: 20px;
+    background: white;
 }
 
-.coding .image-container{
-    justify-content: flex-start;
+.languages {
+    background: var(--indigo);
 }
 
-.coding .image-container img {
-    width: 100%;
-    height: auto;
-  }
-
-  .coding .text-container {
-    flex-basis: 100%;
-    align-self: center;
-  }
-
-  .coding .text-container p {
-    text-align: justify;
-    font-family: 'Noto Sans JP', Helvetica;
-    margin-top: 20px;
-    padding: 5%;
-    color: black;
-    
-}
-
-.coding .text-container ul {
-    font-family: 'Noto Sans JP', Helvetica;
-}
-
-/* Languages Section */ 
-
-
-/*Header of the languages section */
-#languages_header {
-    color:  white;
-    text-transform: uppercase;
-    text-align: center;
+/* Headers */
+#antilibrary_header, #coding_header, #languages_header {
     font-family: 'Rampart One', Helvetica;
     font-size: 25px;
     font-weight: bold;
-}
-
-
-
-.languages {
-    background-color: var(--dutch-blue);
-    font-family: 'Noto Sans JP', Helvetica;
-    color: white;
-    display: flex;
-    padding-right: 20px;
-    
-}
-
-.languages .image-container{
-    justify-content: flex-start;
-}
-
-.languages .image-container img {
-    width: 100%;
-    height: auto;
-  }
-
-  .languages .text-container {
-    flex-basis: 100%;
-    align-self: center;
-    padding-left: 2%;
-  }
-
-
-  .languages .text-container p {
-    text-align: justify;
-    font-family: 'Noto Sans JP', Helvetica;
-    margin-top: 20px;
-    padding: 2%;
-    color: white;
-    margin-bottom: 0;
-
-}
-    /* justify single lines from languages box */
-.languages .text-container p:not(:last-child)::after {
-    content : "";
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
     display: inline-block;
     width: 100%;
-    padding-left: 2%;
 }
 
-#second_p_languages{
-    padding-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 1%;
-    margin: 0;
+/* Text styles */
+.text-container p {
+    margin: 1.5rem 0;
+    text-align: justify;
 }
 
-.languages .text-container a {
-    color: #FECC02 ;
+.text-container ul {
+    margin: 1.5rem 0;
+    list-style-position: inside;
 }
 
+/* Link styles */
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-/*will change the color of the visited and active hyperlinks to yellow for the antilibrary section */
-.antilibrary a:visited { 
+.antilibrary a {
     color: #FECC02;
 }
 
-.antilibrary a:active { 
+.coding a {
+    color: var(--indigo);
+}
+
+.languages a {
     color: #FECC02;
 }
 
-/*will change the color of the visited and active hyperlinks to yellow for the languages section */
-
- .languages a:visited { 
-    color: #FFCD00;
-}
-
-.languages a:active { 
-    color: #FFCD00;
-}
-
-/*will change the color of the visited and active hyperlinks to yellow for the coding section */
-
-.coding a:visited { 
-    color: #006AA7;
-}
-
-.coding a:active { 
-    color: #006AA7;
-}
-
-
-/* -------------------------------------------------------------------------------------------------*/
-/* Large */
-.navigation {
-    display: flex;
-    flex-flow: row wrap;
-    /* This aligns items to the end line on main-axis */
-    justify-content: flex-end;
-}
-
-/* @media (max-width: 420px){
-    .wrap {
-        max-width: 320px;
-        display: block;
+/* Responsive design */
+@media all and (max-width: 1200px) {
+    .antilibrary, .coding, .languages {
+        padding: 4rem 10%;
     }
+}
 
-    .wrap p {
-        margin-block-start: -3rem;
-        margin-inline-start: 1rem;
-        padding: 1rem;
-        position: relative;
-    }
-} */ 
-
-/* Medium screens */
 @media all and (max-width: 800px) {
-    .navigation {
-        /* When on medium sized screens, we center it by evenly distributing empty space around items */
-    justify-content: space-around;
+    #main_resources_header {
+        padding: 6rem 0;
+        margin: 2rem auto;
+    }
+
+    .latin-title {
+        font-size: 3rem;
+    }
+
+    .japanese-title {
+        font-size: 1.8rem;
+    }
+
+    .antilibrary, .coding, .languages {
+        flex-direction: column;
+        padding: 2rem 5%;
+        gap: 2rem;
+        min-height: auto;
+    }
+
+    .image-container, .text-container {
+        max-width: 100%;
     }
 }
 
-/* Small screens */
 @media all and (max-width: 500px) {
-  
-    .antilibrary {
-        display: flex;
-        flex-direction: row;
-        background-color: var(--dutch-red);
-        flex-wrap: wrap;
-        padding-right: 5px;
-        padding-left: 5px;
-    } 
-
-    .coding {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        background-color: white;
-        padding-right: 0.5px;
-        padding-left: 0.5px;
+    #main_resources_header {
+        padding: 4rem 0;
+        margin: 1rem auto;
     }
 
-    .languages {
-        background-color: var(--dutch-blue);
-        display: flex;
-        flex-direction: row;
-        padding-right: 5px;
-        padding-left: 5px;
-        flex-direction: row;
-        flex-wrap: wrap;
+    .latin-title {
+        font-size: 2.5rem;
     }
 
-    body {
-        max-width: 100%;
-        margin: 0 auto;  
-        
+    .japanese-title {
+        font-size: 1.5rem;
     }
 
-    .navigation{
-        /* On small screens, we are no longer using row direction but column */
-        flex-direction:row;
+    .zen-circle {
+        width: 25px;
+        height: 25px;
+        right: calc(50% - 120px);
+    }
+
+    .zen-line {
+        width: 30px;
+    }
+
+    .antilibrary, .coding, .languages {
+        padding: 2rem 1rem;
     }
 }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning Bookmarks</title>
+    <link rel="stylesheet" href="css/language_bookmarks.css">
+</head>
+<body>
+    <div class="grid">
+        <header class="page-header">
+            <h1>Bookmarks</h1>
+            <p id="page_description">A collection of links to various pieces of content to learn the language</p>
+        </header>
+        
+        <div class="each_lang">
+            <div class="language-card" id="dutch">
+                <h2>Dutch</h2>
+                <div class="card-content">
+                    <img src="./web_images/dutch_language_img.jpg" alt="image of the Netherlands" class="language-image">
+                    <div class="preview-resources">
+                        <ul class="resource-list">
+                            <li class="resource-item">
+                                <a href="https://woordenlijst.org/" target="_blank">woordenlijst</a>
+                                <p class="resource-description">Look for the proper spelling and forms/conjugation of a word</p>
+                            </li>
+                            <li class="resource-item">
+                                <a href="https://www.nporadio1.nl" target="_blank">nporadio1</a>
+                                <p class="resource-description">Listen to radio in Dutch</p>
+                            </li>
+                        </ul>
+                        <button class="view-all" data-language="dutch">View All Resources</button>
+                    </div>
+                </div>
+            </div>
+
+           <div class="language-card" id="german">
+            <h2>German</h2>
+            <div class="card-content">
+                <img src="./web_images/german_language_img.jpg" alt="image of Germany" class="language-image">
+                <div class="preview-resources">
+                    <ul class="resource-list">
+                        <li class="resource-item">
+                            <a href="https://woordenlijst.org/" target="_blank">Deutsche Welle</a>
+                            <p class="resource-description">a newspaper that have a section to help you learn and they tailor it according to your level</p>
+                        </li>
+                        <li class="resource-item">
+                            <a href="https://www.zdf.de/" target="_blank">ZDF</a>
+                            <p class="resource-description">watch films and documentaries in German</p>
+                        </li>
+                    </ul>
+                    <button class="view-all" data-language="german">View All Resources</button>
+                </div>
+            </div>
+           </div>
+           <!-- French Card -->
+           <div class="language-card" id="French">
+            <h2>French</h2>
+            <div class="card-content">
+                <img src="./web_images/french_language_img.jpg" alt="image of France" class="language-image">
+                <div class="preview-resources">
+                    <ul class="resource-list">
+                        <li class="resource-item">
+                            <a href="https://www.lepointdufle.net/" target="_blank">Le point du fle</a>
+                            <p class="resource-description">It provides lesson plans and activities to practice what you've learned</p>
+                        </li>
+                        <li class="resource-item">
+                            <a href="https://www.reddit.com/r/learnfrench/" target="_blank">Reddit Learn French</a>
+                            <p class="resource-description">A community where learners share tools and resources</p>
+                        </li>
+                    </ul>
+                    <button class="view-all" data-language="french">View All Resources</button>
+                </div>
+            </div>
+           </div>
+           <!-- Italian-->
+           <div class="language-card" id="Italian">
+            <h2>Italian</h2>
+            <div class="card-content">
+                <img src="./web_images/italian_language_img.jpg" alt="image of Italy" class="language-image">
+                <div class="preview-resources">
+                    <ul class="resource-list">
+                        <li class="resource-item">
+                            <a href="https://www.rai.it/" target="_blank">RAI</a>
+                            <p class="resource-description">news, entertainment, sports and culture website in Italian</p>
+                        </li>
+                        <li class="resource-item">
+                            <a href="https://www.youtube.com/@GialloZafferanoTV/videos" target="_blank">Cucinare</a>
+                            <p class="resource-description">why not watching videos of a topic you are interested in, and everyone loves italian food!</p>
+                        </li>
+                    </ul>
+                    <button class="view-all" data-language="italian">View All Resources</button>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+
+    <!-- Expanded View Container -->
+    <div class="expanded-view">
+        <div class="expanded-header">
+            <h2> Expanded Resources</h2>
+            <button class="close-button">Close</button>
+        </div>
+        <div class="expanded-grid">
+        </div>
+    </div>
+
+    <script src="expand_languages.js"></script>
+</body>
+</html>

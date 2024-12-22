@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .header h1 {
+      color: #E4232E;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+
+    .subheader {
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .language-card {
+      background: white;
+      border-radius: 0;
+      padding: 2rem;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .language-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .language-card h2 {
+      color: #005AA9;
+      font-size: 1.5rem;
+      margin: 0 0 1.5rem 0;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .language-card h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 2rem;
+      height: 3px;
+      background-color: #E4232E;
+    }
+
+    .resource-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .resource-item {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-left: 3px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .resource-item:hover {
+      border-left-color: #005AA9;
+      background-color: #f8f8f8;
+    }
+
+    .resource-link {
+      color: #333;
+      text-decoration: none;
+      display: block;
+    }
+
+    .resource-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Bookmarks</h1>
+    <p class="subheader">A collection of links to various pieces of content to learn the language</p>
+  </div>
+  
+  <div class="grid">
+    <div class="language-card">
+      <h2>Dutch</h2>
+      <ul class="resource-list">
+        <li class="resource-item">
+          <a href="#" class="resource-link">Woordenlijst</a>
+          <p class="resource-description">Look for the proper spelling and forms/conjugation of a word</p>
+        </li>
+        <li class="resource-item">
+          <a href="#" class="resource-link">NPO Radio 1</a>
+          <p class="resource-description">Listen to radio in Dutch</p>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="language-card">
+      <h2>German</h2>
+      <ul class="resource-list">
+        <li class="resource-item">
+          <a href="#" class="resource-link">ZDF</a>
+          <p class="resource-description">Watch films and documentaries in German</p>
+        </li>
+        <li class="resource-item">
+          <a href="#" class="resource-link">Deutsche Welle</a>
+          <p class="resource-description">A newspaper with a section to help you learn</p>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="language-card">
+      <h2>French</h2>
+      <ul class="resource-list">
+        <li class="resource-item">
+          <a href="#" class="resource-link">Le point du fle</a>
+          <p class="resource-description">Provides lesson plans and activities</p>
+        </li>
+        <li class="resource-item">
+          <a href="#" class="resource-link">Le Monde diplomatique</a>
+          <p class="resource-description">An example of a newspaper where you can read articles</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
