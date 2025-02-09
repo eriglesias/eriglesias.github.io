@@ -49,23 +49,31 @@ header {
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10 20px;
+    height: 72px;
     width: 100%;
-    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .navbar_title h3 {
     font-size: 20px;
+    color: white;
+    margin: 0;
 }
 
 .navbar_menu {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     font-size: 16px;
 }
 
 .navbar_menu a {
     color: white;
     text-align: center;
+    padding: 5px;
+    white-space: nowrap;
 }
 
 .navbar_menu a:hover {
@@ -99,6 +107,17 @@ header {
 .home h1, .home h3 {
     font-size: 3rem;
     color: var(--blue);
+}
+
+.home img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+body, html {
+    overflow-x: hidden;
 }
 
 .about {
@@ -218,8 +237,61 @@ header {
 }
 
 @media (max-width: 768px) {
-    .home {
-        padding: 1rem;
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        height: auto;
+        position: relative;
+    }
+
+    .navbar_title {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        gap: 10px;
+        background-color: black;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar_menu a {
+        font-size: 16px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        display: block;
+    }
+
+    .navbar_menu a:hover {
+        background-color: var(--yellow);
+        color: black;
+    }
+
+    #menu-toggle:checked + .navbar_menu {
+        display: flex;
     }
 }
 
