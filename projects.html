@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Enrique Viveros</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rampart+One&family=Nerko+One&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- header section starts-->
+    <header>
+        <!-- start of navbar-->
+        <nav class="navbar">
+            <div class="navbar_title">
+                <h3>Enrique Viveros</h3> 
+            </div>
+            <div class="burger_menu">
+                <div class="burger_icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="navbar_menu">
+                <div class="navbar_menu">
+                    <a href="#about"> 👤 About</a>
+                    <a href="https://erkike.medium.com/"> ✍️ Blog</a>
+                    <a href="./resources.html"> 📚 Resources</a>
+                    <a href="./projects.html"> 💻 Projects</a>
+                    <a href="#contact"> 🤝 Connect with me </a>
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar-->    
+    </header>
+    
+    <main>
+        <section class="projects_container">
+            <div class="gallery_introduction">
+                <h1 class="gallery_title">Projects</h1>
+                <p class="gallery_subtitle">Some of the things I am currently working on or have been doing lately</p>
+            </div>
+            
+            <div class="gallery_grid">
+                <!-- Project Large -->
+                <article class="project_item large">
+                    <div class="project_image">
+                        <img src="./web_images/aesop_fables.png" alt="Aesop Fable Comparison">
+                    </div>
+                    <div class="project_details">
+                        <div class="project_content">
+                            <h3>Aesop Fable Comparison</h3>
+                            <p> Using natural language processing to compare the morals and different elements, as well as other linguistic elements between various versions of the Aesop fables in different languages</p>
+                            <div class="project_tech">
+                                <span>Python</span>
+                                <span>NLP</span>
+                                <span>spaCy</span>
+                            </div>
+                            <a href="https://github.com/eriglesias/aesop_spacy_dutch" class="view_project">View Project</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project 2 - Medium -->
+                <article class="project_item medium">
+                    <div class="project_image">
+                        <img src="./web_images/housing_market.png" alt="German Housing Analysis">
+                    </div>
+                    <div class="project_details">
+                        <div class="project_content">
+                            <h3>Housing Prices Prediction</h3>
+                            <p>A Data Science project using kaggle data and jupyter notebook to explore the data, and create price predictions based on the house properties and location features for the german market</p>
+                            <div class="project_tech">
+                                <span>Data Science</span>
+                                <span>Pandas/ Numpy/ Jupyter/ Matplotlib</span>
+                                <span>Supervised Learning</span>
+                            </div>
+                            <a href="https://github.com/eriglesias/housing_prices_DEU" class="view_project">View Project</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project 3 - Small -->
+                <article class="project_item small">
+                    <div class="project_image">
+                        <img src="./web_images/coding_website.png" alt="Personal Website">
+                    </div>
+                    <div class="project_details">
+                        <div class="project_content">
+                            <h3>Personal Website</h3>
+                            <p>My corner on the web to share what I'm up to</p>
+                            <div class="project_tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="https://erkike.com/" class="view_project">Go home</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project 4 - Medium -->
+                <article class="project_item medium">
+                    <div class="project_image">
+                        <img src="./web_images/siddharta.png" alt="Siddhartha's Analysis">
+                    </div>
+                    <div class="project_details">
+                        <div class="project_content">
+                            <h3>Siddhartha's sentiment analysis</h3>
+                            <p>Exploring the novel "Siddhartha from Herman Hess to extract the general sentiment of the text and other linguistic elements using NLTK -- computational linguistics</p>
+                            <div class="project_tech">
+                                <span>NLTK</span>
+                                <span>Jupyternotebook</span>
+                                <span>Python</span>
+                            </div>
+                            <a href="https://github.com/eriglesias/nltk-novel-exploration" class="view_project">View Project</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="back_home_container">
+                <a href="index.html" class="back_home">Back to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- custom js file link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+    <script src="./JS/projects.js"></script>
+</body>
+</html>

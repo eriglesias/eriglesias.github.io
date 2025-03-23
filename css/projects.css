@@ -1,0 +1,304 @@
+:root {
+    --blue-cheong: #1A68B2; 
+    --red-hong: #D82C20;    
+    --white-baek: #F8F8F8;  
+    --black-heuk: #333333;  
+    --yellow-hwang: #FFC61A; 
+    
+    --bg-color: #FFFFFF;
+    --text-color: #333333;
+    --accent-color: #1A68B2;
+    --border-color: #E6E6E6;
+    --hover-color: rgba(26, 104, 178, 0.05);
+    
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+}
+
+/* === Gallery Container === */
+.projects_container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+.gallery_introduction {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.gallery_title {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+    font-weight: 500;
+    color: var(--black-heuk);
+    position: relative;
+    display: inline-block;
+}
+
+.gallery_title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--blue-cheong);
+}
+
+.gallery_subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: var(--space-md) auto;
+}
+
+/* === Gallery Grid === */
+.gallery_grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(250px, auto);
+    gap: var(--space-md);
+}
+
+/* Project item sizes for asymmetrical layout */
+.project_item.large {
+    grid-column: span 6;
+    grid-row: span 2;
+}
+
+.project_item.medium {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.project_item.small {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+/* === Project Items === */
+.project_item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--white-baek);
+    /* Subtle shadow reminiscent of traditional paper screens */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 
+                0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 
+                0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project_image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.project_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project_item:hover .project_image img {
+    transform: scale(1.05);
+}
+
+/* === Project Details Sliding Panel === */
+.project_details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.9) 80%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    padding: var(--space-md);
+    transform: translateY(70%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Munpan (sliding door) inspired transition */
+}
+
+.project_item:hover .project_details {
+    transform: translateY(0);
+}
+
+.project_content {
+    padding-top: var(--space-sm);
+}
+
+.project_content h3 {
+    color: var(--black-heuk);
+    margin-bottom: var(--space-xs);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.project_content p {
+    color: #666;
+    margin-bottom: var(--space-sm);
+    line-height: 1.5;
+}
+
+/* === Project Technologies === */
+.project_tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin: var(--space-sm) 0;
+}
+
+.project_tech span {
+    background-color: var(--hover-color);
+    color: var(--blue-cheong);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(26, 104, 178, 0.2);
+}
+
+/* === View Project Button === */
+.view_project {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    padding: 8px 20px;
+    color: var(--blue-cheong);
+    background-color: transparent;
+    border: 1px solid var(--blue-cheong);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    /* Dancheong-inspired accent */
+}
+
+.view_project:hover {
+    background-color: var(--blue-cheong);
+    color: white;
+}
+
+/* === Back to Home Button === */
+.back_home_container {
+    text-align: center;
+    margin-top: var(--space-lg);
+}
+
+.back_home {
+    display: inline-block;
+    padding: 12px 30px;
+    color: var(--blue-cheong);
+    background-color: transparent;
+    border: 2px solid var(--blue-cheong);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.back_home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, 
+        var(--blue-cheong) 20%, 
+        var(--red-hong) 20%, var(--red-hong) 40%,
+        var(--yellow-hwang) 40%, var(--yellow-hwang) 60%,
+        var(--white-baek) 60%, var(--white-baek) 80%,
+        var(--blue-cheong) 80%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.back_home:hover {
+    background-color: var(--blue-cheong);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(26, 104, 178, 0.2);
+}
+
+.back_home:hover::before {
+    opacity: 1;
+}
+
+/* === Dancheong-inspired decorative elements === */
+.project_item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, 
+        var(--blue-cheong) 20%, 
+        var(--red-hong) 20%, var(--red-hong) 40%,
+        var(--yellow-hwang) 40%, var(--yellow-hwang) 60%,
+        var(--white-baek) 60%, var(--white-baek) 80%,
+        var(--blue-cheong) 80%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project_item:hover::before {
+    opacity: 1;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 1200px) {
+    .gallery_grid {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    
+    .project_item.large {
+        grid-column: span 4;
+    }
+    
+    .project_item.medium {
+        grid-column: span 4;
+    }
+    
+    .project_item.small {
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery_grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-sm);
+    }
+    
+    .project_item.large,
+    .project_item.medium,
+    .project_item.small {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+    
+    .projects_container {
+        padding: var(--space-md);
+    }
+}
