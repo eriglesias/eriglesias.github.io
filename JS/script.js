@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // Keep your existing burger menu functionality
+    // Burger menu functionality
     const burgerMenu = $('.burger_menu');
     const burgerIcon = $('.burger_icon');
     const navbarMenu = $('.navbar_menu');
@@ -18,33 +18,85 @@ $(document).ready(function(){
         }
     });
     
-    // Simple scroll effect
-    function checkScroll() {
-        $('.about, .contact').each(function() {
-            const elementTop = $(this).offset().top;
-            const windowBottom = $(window).scrollTop() + $(window).height();
-            
-            if (windowBottom > elementTop + 100) {
-                $(this).addClass('visible');
-            }
+    const setupIntersectionObserver = function() {
+        // Create the observer instance
+        const observer = new IntersectionObserver((entries) => {
+            // For each observed element
+            entries.forEach(entry => {
+                // When element becomes visible
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Uncomment if you want the animation only once
+                }
+            });
+        }, {
+            // Trigger when at least 10% of the element is visible
+            threshold: 0.1,
+            // Start observing a bit before the element comes into view
+            rootMargin: '0px 0px -100px 0px'
         });
+        
+        // Observe all elements that need the fade-in effect
+        document.querySelectorAll('.about, .contact').forEach(element => {
+            observer.observe(element);
+        });
+    };
+    
+    // Initialize the intersection observer
+    setupIntersectionObserver();
+    
+    // Throttle function to limit how often a function can execute
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        };
     }
     
-    // Run on scroll and on page load
-    $(window).on('scroll', checkScroll);
-    checkScroll(); // Run once on page load
     
     // Smooth scrolling for anchor links
     $('a[href*="#"]').on('click', function(e){
-        e.preventDefault();
-        
-        // Close burger menu when clicking a link
-        burgerIcon.removeClass('active');
-        navbarMenu.removeClass('active');
-        
-        // Smooth scroll to section
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
-        }, 500);
+        // Only prevent default if it's a same-page link
+        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && 
+            location.hostname === this.hostname) {
+            e.preventDefault();
+            
+            // Close burger menu when clicking a link
+            burgerIcon.removeClass('active');
+            navbarMenu.removeClass('active');
+            
+            // Get the target element
+            const target = $(this.hash);
+            const targetElement = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            
+            // If target exists, scroll to it
+            if (targetElement.length) {
+                // Using a shorter animation duration can make scrolling feel more responsive
+                $('html, body').animate({
+                    scrollTop: targetElement.offset().top
+                }, 300); // Reduced from 500ms to 300ms for quicker response
+            }
+        }
+    });
+    
+    // Run the visibility check once on page load to show elements already in view
+    document.querySelectorAll('.about, .contact').forEach(element => {
+        if (element.getBoundingClientRect().top < window.innerHeight) {
+            element.classList.add('visible');
+        }
     });
 });
