@@ -26,7 +26,7 @@ $(document).ready(function(){
                 // When element becomes visible
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Uncomment if you want the animation only once
+                    observer.unobserve(entry.target); 
                 }
             });
         }, {
@@ -45,27 +45,7 @@ $(document).ready(function(){
     // Initialize the intersection observer
     setupIntersectionObserver();
     
-    // Throttle function to limit how often a function can execute
-    function throttle(func, limit) {
-        let lastFunc;
-        let lastRan;
-        return function() {
-            const context = this;
-            const args = arguments;
-            if (!lastRan) {
-                func.apply(context, args);
-                lastRan = Date.now();
-            } else {
-                clearTimeout(lastFunc);
-                lastFunc = setTimeout(function() {
-                    if ((Date.now() - lastRan) >= limit) {
-                        func.apply(context, args);
-                        lastRan = Date.now();
-                    }
-                }, limit - (Date.now() - lastRan));
-            }
-        };
-    }
+
     
     
     // Smooth scrolling for anchor links

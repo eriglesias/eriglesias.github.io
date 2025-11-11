@@ -54,19 +54,35 @@ const languageResources = {
             url: 'https://www.erkike.com',
             description: 'TEST'
         }
+    ],
+
+    catalan : [
+        {
+            title: 'parla',
+            url: 'https://',
+            description: ''
+        }
+    ],
+
+    japanese : [
+        {
+            title: '',
+            url: '',
+            description: ''
+        }
     ]
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-    const viewAllButtons = document.querySelectorAll('.view-all');
-    const expandedView = document.querySelector('.expanded-view');
-    const closeButton = document.querySelector('.close-button');
+    const viewAllButtons = document.querySelectorAll('.view_all');
+    const expandedView = document.querySelector('.expanded_view');
+    const closeButton = document.querySelector('.close_button');
     
     function toggleExpandedView(language, show = true) {
         if (show) {
             const resources = languageResources[language];
-            const expandedGrid = expandedView.querySelector('.expanded-grid');
-            const headerTitle = expandedView.querySelector('.expanded-header h2');
+            const expandedGrid = expandedView.querySelector('.expanded_grid');
+            const headerTitle = expandedView.querySelector('.expanded_header h2');
             
             // Update header
             headerTitle.textContent = `${language.charAt(0).toUpperCase() + language.slice(1)} Resources`;
@@ -75,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
             expandedGrid.innerHTML = '';
             resources.forEach(resource => {
                 const item = document.createElement('div');
-                item.className = 'expanded-item';
+                item.className = 'expanded_item';
                 item.innerHTML = `
                     <h3><a href="${resource.url}" target="_blank">${resource.title}</a></h3>
                     <p>${resource.description}</p>

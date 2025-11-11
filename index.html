@@ -9,6 +9,7 @@
         <meta name="ai" content="noindex">
         <title>Enrique Viveros Acosta</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!-- font awesome cdn link  -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <!-- custom css file link  -->
@@ -17,101 +18,172 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rampart+One&family=Nerko+One&display=swap" rel="stylesheet">
     </head>
 
-<!--start of body -->
-<body>
- <!-- sibling div for parallax effect -->   
- <div class="parallax_bg"></div>
-<!-- header section starts-->
-<header>
-    <!-- start of navbar-->
-    <nav class="navbar">
-        <div class="navbar_title">
-            <h3>Enrique Viveros</h3> 
-        </div>
-        <div class="burger_menu">
-            <div class="burger_icon">
-                <span></span>
-                <span></span>
-                <span></span>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="navbar_title">
+                    <h3><a href="/index.html">Enrique Viveros</a></h3> 
+                </div>
+                <div class="burger_menu">
+                    <div class="burger_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="navbar_menu">
+                    <a href="/index.html">Home</a>
+                    <a href="https://erkike.medium.com/">Writing</a>
+                    <a href="/html/projects.html">Projects</a>
+                </div>
+            </nav>   
+        </header>
+
+        <section class="home" id="home">
+            <div id="salutation">
+                <h1>Hello there!</h1>
             </div>
-        </div>
-        <div class="navbar_menu">
-            <a href="#about"> 👤 About</a>
-            <a href="https://erkike.medium.com/"> ✍️ Blog</a>
-            <a href="./resources.html"> 📚 Resources</a>
-            <a href="./projects.html"> 💻 Projects</a>
-            <a href="#contact"> 🤝 Connect with me </a>
-        </div>
-    </nav>
-    <!-- end of navbar-->    
-</header>
-<!-- header section ends-->
+            <p class="intro_narrative">
+                This is my digital space to showcase my work and ideas. Here I share what I am discovering, whether it be programming a project, exploring a language, or creating a new cocktail. It is a work in progress, just like me. 
+            </p>
+                <div id="home_info" >
+                    <div id="small_welcome">
+                        <img src="./web_images/pixar_style.png" alt="Image of the home section" width="400" height="400">
+                    </div>
+                    <div class="about_me_info">
+                    <h2>Some things about me</h2>
+                        <ul>
+                            <li><h4>🦸<span> Nickname:</span> Iglesias</h4></li>
+                            <li><h4>💬<span> Languages:</span> Spanish 🇪🇸, English 🇺🇸, German 🇩🇪, Catalan 🇦🇩, French 🇫🇷</h4></li>
+                            <li><h4> <span>📍Basecamp:</span> Germany 🇩🇪</span></h4></li>
+                            <li><h4>🍹✨ <a href="https://instagram.com/er_remy?utm_source=qr" target="_blank" rel="noopener noreferrer">Cocktail Alchemy (external link) </a></h4></li>
+                            </ul>
+                    </div>
+                 </div>
+            </div>
+        </section> 
 
-<!-- <div id="menu" class="fas fa-bars"></div>  -->
+        <section class="now_section" id="now">
+            <h2>Now</h2>
+            <div class="now_grid">
+               <div class="now_item">
+                <h4>Reading 📖 </h4>
+                <p>War's Unwomanly Face - Svetlana Alexievitch</p>
+                </div>
+                <div class="now_item">
+                <h4>📓 Learning</h4>
+                <p>GenAI for art creating (Midjourney)</p>
+                </div>
+                <div class="now_item">
+                <h4>💻 Coding</h4>
+                <p>A Vue.js site </p>
+                </div>
+                
+            </div>
+            
+        </section>
 
-<!-- home section starts-->
-<section class="home" id="home">
-    <h2>Hallo daar!</h2>
-    <img src="./web_images/pixar_style.png" alt="Image of the home section" width="400" height="400">
-    <h1 class="fade_in">I am Enrique</h1>
+        <section class="featured_projects" id="featured_projects">
+            <h2>Some Featured Projects</h2>
+            <div class="projects_grid">
+                <article class="project_card">
+                    <div class="project_image">
+                        <img src="./web_images/recipe_favorites.png" alt="Ghibli Cookbook">
+                    </div>
+                    <div class="project_details">
+                        <h3>Ghibli Cookbook</h3>
+                        <p>A Ghibli-inspired React app with recipe browsing, search, and favorites.</p>
+                        <div class="project_tech">
+                            <span>React</span> <span>Node.js</span> <span>MongoDB</span>
+                        </div>
+                    </div>
+                </article>
 
-</section>
-<!-- home section ends -->
+                <article class="project_card">
+                    <div class="project_image">
+                        <img src="./web_images/aesop_fables.png" alt="RossettaFables">
+                    </div>
+                    <div class="project_details">
+                        <h3>Rosetta Fables</h3>
+                        <p>Analyzes Aesop's fables in multiple languages using NLP to find patterns.</p>
+                        <div class="project_tech">
+                            <span>Python</span> <span>NLP</span> <span>Spacy</span>
+                        </div>
+                    </div>
+                </article>
 
-<!-- about section starts--> 
- 
-<section class="about" id="about">
-    <h2>Some things about me</h2>
-    <div class="row">
-        <div class="info">
-            <ul>
-                <li><h4>🦸<span> Nickname:</span> Iglesias</h4></li>
-                <li><h4>🌌🌀 Decrypting the Matrix of Modern Computing and Software Development 🔐 </h4></li>
-                <li><h4>🏗️📈 <span>Background:</span> Industrial Engineering and administration</h4></li>
-                <li><h4>💬<span> Languages:</span> Spanish 🇪🇸, English 🇺🇸, German 🇩🇪, Catalan 🇦🇩, French 🇫🇷</h4></li>
-                <li><h4>💼<span> Experience:</span> Pricing Analysis 📊 & Logistics 🚚</h4></li>
-                <li><h4>📍Basecamp: <span> Germany 🇩🇪</span></h4></li>
-                <li><h4>🍹✨ <a href="https://instagram.com/er_remy?utm_source=qr" target="_blank" rel="noopener noreferrer">Cocktail Alchemy</a></h4></li>
-            </ul>
-            <a href="https://drive.google.com/file/d/1XZ3o_iWS4x1OWH6j3xo6PZBkHz4WXTfC/view?usp=drive_link">
-                <button class="btn">See my CV <i class="fas fa-download"></i></button>
-            </a>
-        </div>
-    </div>
-</section>
+                <article class="project_card">
+                    <div class="project_image">
+                        <img src="./web_images/housing_market.png" alt="German Hosuing Analysis">
+                    </div>
+                    <div class="project_details">
+                        <h3>Housing Prices Prediction</h3>
+                        <p>A Data Science project to explore and predict housing prices in Germany.</p>
+                        <div class="project_tech">
+                            <span>Data Science</span> <span>Pandas</span> <span>Jupyter</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="view_all_container">
+                <a href="/html/projects.html" class="btn">See all projects</a> 
+            </div>
+        </section>
+       
+       
 
- <!-- about section ends -->
+        <section class="toolbox_section" id="toolbox">
+            <h2>My toolbox</h2>
+            <div class="toolbox_grid">
+                <article class="toolbox_card">
+                    <div class="toolbox_image">
+                        <img src="./web_images/tsundoku_1.jpeg" alt="a person reading a book">
+                    </div>
+                    <div class="toolbox_content">
+                        <h3>My Anti-library</h3>
+                        <p>A digital version of my 'Tsundoku' (積ん読). A humble reminder of all the things I don't know yet.</p>
+                        <a href="https://docs.google.com/spreadsheets/d/1gqnNogUq1Rc3c8Sb4jqj3pjIvkWyHWrvQ0q_MOCNEQ0/edit?usp=drive_link" class="btn" target="_blank">See my antilibrary</a>
+                    </div>
+                </article>
+                <article class="toolbox_card">
+                    <div class="toolbox_image">
+                        <img src="./web_images/openart-image_B3GKah0G_1733837209613_raw.png" alt="a person reading a book">
+                    </div>
+                    <div class="toolbox_content">
+                        <h3> Language Learning Bookmarks </h3>
+                        <p>Some hand-picked list of good language resources I've found. No fluff, just the good stuff.</p>
+                        <a href="./html/languages_bookmarks.html" class="btn" target="_blank">See my bookmarks</a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-<!-- contact section starts  -->
-<section class="contact" id="contact">
-    <h2>Connect with Me</h2>
-    <div class="contact-grid">
-        <div class="contact-item">
-            <i class="fab fa-linkedin fa-2x"></i>
-            <a href="https://www.linkedin.com/in/enrique-viveros">Linkedin</a>
-        </div>
-        <div class="contact-item">
-            <i class="fab fa-twitter fa-2x"></i>
-            <a href="https://twitter.com/esglesies_en">Twitter</a>
-        </div>
-        <div class="contact-item">
-            <i class="fab fa-github fa-2x"></i>
-            <a href="https://github.com/eriglesias">Github</a>
-        </div>
-        <div class="contact-item">
-            <i class="fas fa-envelope fa-2x"></i>
-            <a href="mailto:encig@duck.com">E-mail</a>
-        </div>
-    </div>
-</section>
-
-<!-- end of contact section-->
-
-
-<!-- custom js file link  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
-<script src="./JS/script.js"></script>
-</body>
-<!-- end of body -->
-
+        <section class="contact" id="contact">
+            <h2>Connect with Me</h2>
+            <p class="contact_intro">Want to say hi? Drop me a line.</p>
+            <div class="contact_grid">
+                <div class="contact_card">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                    <h3> Linkedin</h3>
+                    <p>Professional network</p>
+                    <a href="https://www.linkedin.com/in/enrique-viveros" class="btn" target="_blank">Linkedin</a>
+                </div>
+                <div class="contact_card">
+                    <i class="fab fa-github fa-2x"></i>
+                    <h3>GitHub</h3>
+                    <p>Code, projects and contributions</p>
+                    <a href="https://github.com/eriglesias" class="btn" target="_blank">See Repositories</a>
+                </div>
+                <div class="contact_card">
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <h3>Email</h3>
+                    <p>Best way for a direct conversation</p>
+                    <a href="mailto:encig.y36tq@simplelogin.com" class="btn">Send a message</a>
+                </div>
+            </div>
+        </section>
+    <!-- custom js file link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+    <script src="./JS/main.js"></script>
+    </body>
 </html>

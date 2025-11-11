@@ -4,53 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Enrique Viveros</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/projects.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rampart+One&family=Nerko+One&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- header section starts-->
     <header>
-        <!-- start of navbar-->
         <nav class="navbar">
-            <div class="navbar_title">
-                <h3>Enrique Viveros</h3> 
-            </div>
-            <div class="burger_menu">
-                <div class="burger_icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="navbar_title">
+                    <h3><a href="/index.html">Enrique Viveros</a></h3> 
                 </div>
-            </div>
-            <div class="navbar_menu">
+                <div class="burger_menu">
+                    <div class="burger_icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
                 <div class="navbar_menu">
-                    <a href="#about"> 👤 About</a>
-                    <a href="https://erkike.medium.com/"> ✍️ Blog</a>
-                    <a href="./resources.html"> 📚 Resources</a>
-                    <a href="./projects.html"> 💻 Projects</a>
-                    <a href="#contact"> 🤝 Connect with me </a>
+                    <a href="/index.html"> Home</a>
+                    <a href="https://erkike.medium.com/"> Writing</a>
+                    <a href="./projects.html"> Projects</a>
                 </div>
-            </div>
-        </nav>
-        <!-- end of navbar-->    
+            </nav>   
     </header>
     
     <main>
         <section class="projects_container">
             <div class="gallery_introduction">
                 <h1 class="gallery_title">Projects</h1>
-                <p class="gallery_subtitle">Some of the things I am currently working on or have been doing lately</p>
+                <h2 class="gallery_subtitle">Some of the things I am currently working on or have been doing lately</h2>
             </div>
             
             <div class="gallery_grid">
-                <!-- Project Large -->
-                <article class="project_item large">
+                <article>
                     <div class="project_image">
-                        <img src="./web_images/aesop_fables.png" alt="Aesop Fable Comparison">
+                        <img src="/web_images/aesop_fables.png" alt="Aesop Fable Comparison">
                     </div>
                     <div class="project_details">
                         <div class="project_content">
@@ -65,11 +57,10 @@
                         </div>
                     </div>
                 </article>
-                
-                <!-- Project 2 - Medium -->
-                <article class="project_item medium">
+            
+                <article>
                     <div class="project_image">
-                        <img src="./web_images/housing_market.png" alt="German Housing Analysis">
+                        <img src="/web_images/housing_market.png" alt="German Housing Analysis">
                     </div>
                     <div class="project_details">
                         <div class="project_content">
@@ -78,55 +69,66 @@
                             <p>A Data Science project using kaggle data and jupyter notebook to explore the data, and create price predictions based on the house properties and location features for the german market</p>
                             <div class="project_tech">
                                 <span>Data Science</span>
-                                <span>Pandas/ Numpy/ Jupyter/ Matplotlib</span>
-                                <span>Supervised Learning</span>
+                                <span>Pandas</span>
+                                <span>Machine Learning</span>
                             </div>
                             <a href="https://github.com/eriglesias/housing_prices_DEU" class="view_project">View Project</a>
                         </div>
                     </div>
                 </article>
                 
-                <!-- Project 3 - Small -->
-                <article class="project_item small">
+                <article>
                     <div class="project_image">
-                        <img src="./web_images/coding_website.png" alt="Personal Website">
+                        <img src="/web_images/coding_website.png" alt="Personal Website">
                     </div>
                     <div class="project_details">
                         <div class="project_content">
                             <h3>Personal Website</h3>
-                            <p>My corner on the web to share what I'm up to</p>
+                            <p>My corner on the web to share some thoughts and what I'm up to</p>
                             <div class="project_tech">
                                 <span>HTML</span>
                                 <span>CSS</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="https://erkike.com/" class="view_project">Go home</a>
                         </div>
                     </div>
                 </article>
-                
-                <!-- Project 4 - Medium -->
-                <article class="project_item medium">
+                  
+                <article>
                     <div class="project_image">
-                        <img src="./web_images/siddharta.png" alt="Siddhartha's Analysis">
+                        <img src="/web_images/siddharta.png" alt="Siddhartha's Analysis">
                     </div>
                     <div class="project_details">
                         <div class="project_content">
                             <h3>Siddhartha's sentiment analysis</h3>
-                            <p>Exploring the novel "Siddhartha from Herman Hess to extract the general sentiment of the text and other linguistic elements using NLTK -- computational linguistics</p>
+                            <p>Exploring the novel "Siddhartha from Herman Hess to extract the general sentiment of the text and other linguistic elements using a computational linguistics library </p>
                             <div class="project_tech">
                                 <span>NLTK</span>
-                                <span>Jupyternotebook</span>
+                                <span>NLP</span>
                                 <span>Python</span>
                             </div>
                             <a href="https://github.com/eriglesias/nltk-novel-exploration" class="view_project">View Project</a>
                         </div>
                     </div>
                 </article>
-            </div>
-            
-            <div class="back_home_container">
-                <a href="index.html" class="back_home">Back to Home</a>
+
+                <article>
+                    <div class="project_image">
+                        <img src="/web_images/recipe_favorites.png" alt="ghibli cookbook image">
+                    </div>
+                    <div class="project_details">
+                        <div class="project_content">
+                            <h3>Ghibli Cookbook</h3>
+                            <p>A Ghibli-inspired, mobile responsive React app with MongoDB backend, featuring recipe browsing, daily recipe, favorites, search, detail views and auth. Jap cuisine + UI </p>
+                            <div class="project_tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        <a href="https://ghibli-cookbook.netlify.app/home" class="view_project">View Project</a>
+                        </div>       
+                    </div>
+                </article>
             </div>
         </section>
     </main>
